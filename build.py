@@ -20,10 +20,8 @@ LANG = "zh-hant"
 # 要輸出的頁面：Django URL 路徑片段 -> 輸出資料夾（"" 代表語言首頁）
 PAGES = ["", "about", "products", "rental", "ourfactory", "courses"]
 
-# 寫入 CNAME；不綁網域就設成 None。
-# 目前先用 https://derick0823.github.io/gubacoffee-site/ 預覽，
-# DNS 切到 GitHub Pages 時改回 "gu8coffee.com" 再 build 一次。
-DOMAIN = None
+# 寫入 CNAME；不綁網域就設成 None（改用 https://derick0823.github.io/gubacoffee-site/）
+DOMAIN = "gu8coffee.com"
 
 # 沒被任何頁面引用、又超過這個大小的 asset 不複製（避免 repo 塞滿原始大圖）
 SKIP_UNREFERENCED_OVER = 5 * 1024 * 1024
