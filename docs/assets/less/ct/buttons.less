@@ -1,0 +1,189 @@
+.btn{
+  font-family: @font-family2;
+  text-transform: uppercase;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  span{
+    display: block;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+  }
+  &:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: attr(data-hover);
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  &:hover, &:focus, &:active{
+    &:before{
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      transform: translateX(0%);
+    }
+    span{
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+  }
+}
+
+.btn.btn-sm.btn-primary:before, .btn.btn-sm.btn-success:before, .btn.btn-sm.btn-danger:before, .btn.btn-sm.btn-warning:before, .btn.btn-sm.btn-info:before {
+  top:5px!important;
+}
+.btn.btn-xs.btn-primary:before, .btn.btn-xs.btn-success:before, .btn.btn-xs.btn-danger:before, .btn.btn-xs.btn-warning:before, .btn.btn-xs.btn-info:before {
+  top:1px!important;
+}
+.btn-xs{
+  span{
+    padding: @padding-xs-vertical @padding-xs-horizontal;
+  }
+}
+.btn-sm{
+  span{
+    padding: @padding-small-vertical @padding-small-horizontal;
+  }
+}
+.btn-lg, .btn-group-lg > .btn {
+  font-size: 18px;
+}
+.btn-lg{
+  span{
+    padding-left: 16px ;
+    padding-right: 16px ;
+    padding-top: 9px ;
+    padding-bottom: 8px ;
+  }
+  &:before{
+    padding-left: 16px ;
+    padding-right: 16px ;
+    padding-top: 9px ;
+    padding-bottom: 8px ;
+  }
+}
+
+.btn-default{
+  &:before{
+    background-color: #262626;
+    color: #ffffff;
+  }
+  span{
+    background-color: #ffffff;
+  }
+  &:hover, &:focus, &:active{
+    background-color: transparent;
+  }
+}
+.btn-inverse{
+  color: #ffffff;
+  &:before{
+    background-color: #ffffff;
+    color: #262626;
+  }
+  span{
+    background-color: #262626;
+  }
+  &:hover, &:focus, &:active{
+    background-color: transparent;
+  }
+}
+.btn-button--dark {
+  color:white;
+  background-color: black;
+  font-family: @font-family2; //Fjalla One
+  padding: 13px 30px 13px 30px;
+  &:hover {
+    background-color: #ab9178;
+    color:white!important;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+}
+.btn-button--brown {
+  color:white;
+  background-color: #ab9178;
+  font-family: @font-family2; //Fjalla One
+  font-size: 16px;
+  padding: 8px 20px 8px 20px;
+  &:hover {
+    background-color: #262626;
+    color:white;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+}
+
+.btn-success{
+  border-color: @brand-success;
+  background-color: darken(@brand-success, 10%);
+  &:hover, &:active, &:focus{
+    background-color: darken(@brand-success, 10%);
+    border-color: darken(@brand-success, 10%);
+  }
+}
+.btn-danger{
+  border-color: @brand-danger;
+  background-color: darken(@brand-danger, 10%);
+  &:hover, &:active, &:focus{
+    background-color: darken(@brand-danger, 10%);
+    border-color: darken(@brand-danger, 10%);
+  }
+}
+.btn-info{
+  border-color: @brand-info;
+  background-color: darken(@brand-info, 10%);
+  &:hover, &:active, &:focus{
+    background-color: darken(@brand-info, 10%);
+    border-color: darken(@brand-info, 10%);
+  }
+}
+.btn-warning{
+  border-color: @brand-warning;
+  background-color: darken(@brand-warning, 10%);
+  &:hover, &:active, &:focus{
+    background-color: darken(@brand-warning, 10%);
+    border-color: darken(@brand-warning, 10%);
+  }
+}
+.btn-primary{
+  border-color: #fc4349;
+  background-color: #fc4349;
+  &:hover, &:active, &:focus{
+    background-color: #fc4349;
+    border-color: #fc4349;
+  }
+}
+
+@media(max-width: @screen-sm-max){
+  .ct-navigation-blog .btn-lg.btn-button--dark {
+    display: block;
+  }
+}
+
+ul.ct-buttonList li {
+  padding: 7px;
+}
+@media(max-width:320px) {
+  .ct-CateringButton {
+    width:100%;
+  }
+}
+.close {
+  line-height: 1!important;
+}

@@ -1,0 +1,64 @@
+.panel {
+  background-color: transparent;
+}
+.panel-title > a {
+  position: relative;
+  display: block;
+}
+.panel-title > a:before {
+  font-family: fontawesome;
+  content: "\f068";
+  position: absolute;
+  left: -16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.panel-title > a.collapsed:before {
+  content: "\f067";
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.panel-title > a {
+  text-transform: uppercase;
+  font-family: @font-family2;
+  font-size: 18px;
+  text-decoration: none;
+  padding-left: 3px;
+  padding-bottom: 8px;
+  padding-top: 5px;
+}
+
+.panel-default > .panel-heading {
+  background-color: transparent;
+}
+.panel-group .panel {
+  border: 0;
+}
+.panel-heading {
+  border: 0!important;
+  padding:10px 15px;
+}
+.panel-group {
+  margin-bottom: 5px;
+}
+.panel-body {
+  padding: 0 0 15px 0;
+}
+.panel.panel-default {
+  border-bottom: 2px solid #ab9178;
+}
+
+.panel-default .panel-title  a {
+  color:black;
+
+}
+.panel-default .panel-title  a.collapsed {
+  color:#ab9178;
+}
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+  border-top:0px ;
+}
+.panel-default .panel-title a:hover {
+  color: #262626!important;
+}
